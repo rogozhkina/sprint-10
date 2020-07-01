@@ -31,8 +31,11 @@
             <div class="form__field">
               <input
                 class="form__input"
+                minlength="2"
+                maxlength="20"
                 type="text"
                 name="name"
+                pattern="[А-ЯЁ]{1}[а-яё]+(-[А-ЯЁ]{1}[а-яё]+)?"
                 placeholder="Имя"
                 required
               />
@@ -42,6 +45,7 @@
                 class="form__input"
                 type="text"
                 name="email"
+                pattern="[\w-]+@[a-z0-9-]+\.[a-z]{2,3}(\.[a-z]{2,3})?"
                 placeholder="E-Mail"
                 required
               />
@@ -55,6 +59,7 @@
                 type="text"
                 name="tel"
                 placeholder="Телефон"
+                pattern="((\+7)|8)(\s|\()?\d{3}(\s|\)|-)?\s?\d{3}(-?\d{2}){2}"
                 minlength=""
                 maxlength="18"
                 required
@@ -66,6 +71,7 @@
                 class="form__input"
                 type="text"
                 name="url"
+                pattern="https?:\/\/(www\.)?(([\w-]+(\.[a-z]{2,})+)|[\d\.]{2,})(:\d{2,5})?([\w\/]*)#?"
                 placeholder="Ваш сайт"
                 required
               />
